@@ -43,3 +43,38 @@ function findLongerString(str1, str2) {
 //}
 console.log(findLongerString("hello world", "have a really nice day"));
 //console.log(sortArray(["hello world", "have a really nice day"]));
+
+
+//question 2 create array of name and email, sort by longest name then alphabetical by email address
+
+var arrayName = [["Bob", "Robert@rcn.com"],["Larry", "larry@msn.com"], ["Sue", "greatgoddess@earthlink.com"], ["Katrina", "katherine@yahoo.com"]];
+    
+
+function findLongerName(arrayName) {
+        function compare(a, b) {
+            if /*(a is less than b by some ordering criterion)*/(a[0].length < b[0].length) {
+            return -1;
+         }
+            if /*(a is greater than b by the ordering criterion)*/ (a[0].length> b[0].length) {
+            return 1;
+         }
+  // a must be equal to b
+    return 0;
+}
+    return arrayName.sort(compare);
+}
+console.log(findLongerName(arrayName));
+
+function alphabeticalEmail(arrayName) {
+    function compare(a, b){
+        if (a[1].toUpperCase() < b[1].toUpperCase()) {
+            return -1;
+    }
+    if (a[1].toUpperCase() > b[1].toUpperCase()) {
+        return 1;
+    }
+    return 0;
+}
+    return arrayName.sort(compare);
+}
+console.log(alphabeticalEmail(arrayName));
