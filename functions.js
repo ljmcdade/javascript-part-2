@@ -83,8 +83,8 @@ console.log(alphabeticalEmail(arrayName));
 
 //question 3 create function with array.prototype.map to take a number and return its square
 
-var numbers = [1, 4, 9];
-var roots = numbers.map(Math.sqrt);
+//var numbers = [1, 4, 9];
+//var roots = numbers.map(Math.sqrt);
 // roots is now [1, 2, 3], numbers is still [1, 4, 9]
 
 var numbers = [1, 4, 9];
@@ -94,4 +94,51 @@ var squares = numbers.map(square);
 function square(n){
     return n*n;
 }
+console.log(squares);
+
+//used sqrt function to rewrite to create squaring function
+
+
+//question 4 square a "num" property in array
+
+
+
+
+
+   var obj1 = {
+        name: "sofa",
+        num: 32
+};
+    var obj2 = {
+        name: "chair",
+        num: 83
+    };
+    
+   var obj3 = {
+        name: "table",
+        num: 16
+    };
+ var obj4 = {
+        name: "floor",
+        num: 102
+    };
+    
+ var objectArray = [obj1, obj2, obj3, obj4];
+    
+//console.log(objectArray);
+
+
+var arrayOfObject = [obj1, obj2, obj3, obj4];
+
+function squareNum(currentObject) {
+    return currentObject.num * currentObject.num;
+ }
+
+//function squareNum(currentObject) {
+  //  currentObject.num = currentObject.num * currentObject.num;
+    //return currentObject;
+//}
+
+var squares = arrayOfObject.map(squareNum);
+
 console.log(squares);
