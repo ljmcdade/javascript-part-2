@@ -78,3 +78,20 @@ function alphabeticalEmail(arrayName) {
     return arrayName.sort(compare);
 }
 console.log(alphabeticalEmail(arrayName));
+
+
+
+//question 3 create function with array.prototype.map to take a number and return its square
+
+var numbers = [1, 4, 9];
+var roots = numbers.map(Math.sqrt);
+// roots is now [1, 2, 3], numbers is still [1, 4, 9]
+
+var numbers = [1, 4, 9];
+var squares = numbers.map(square);
+// roots is now [1, 2, 3], numbers is still [1, 4, 9]
+
+function square(n){
+    return n*n;
+}
+console.log(squares);
